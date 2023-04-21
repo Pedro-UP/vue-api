@@ -1,7 +1,7 @@
 <template>
     <!-- //* Usaremos los siguientes parametros para mostrar la api
    * idCategory, strCategory, strCategoryDescription, strCategoryThumb -->
-  <div class="category_container">
+  <div @click="openCategoryList" class="category_container">
        <!-- //* Para mostrar la imagen. -->
     <img v-bind:src="category.strCategoryThumb" alt="" />
        <!-- //* Para mostrar el nombre de la categoria -->
@@ -13,6 +13,11 @@
 
 <script>
 export default{
-    props:["category"]
+    props:["category"],
+    methods:{
+        openCategoryList(){
+            this.$router.push("/category/" + this.category.strCategory);
+        }
+    }
 }
 </script>

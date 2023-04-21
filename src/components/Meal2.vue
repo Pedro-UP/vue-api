@@ -5,7 +5,6 @@
        <!-- //* Para mostrar el nombre del platillo -->
     <p><b>{{ meal.strMeal }}</b></p>
         <!-- //* Para mostrar la categoria y el origen -->
-    <h5>Categoria: {{ meal.strCategory }} | Origen: {{ meal.strArea}}</h5>
   </div>
 </template>
 
